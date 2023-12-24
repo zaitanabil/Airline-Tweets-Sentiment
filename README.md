@@ -43,8 +43,13 @@ Identify the most common reasons for negative sentiments towards each airline.
 [Detail the methodology and the types of visualizations used for this analysis.]
 
 #### Results
-![Negative Tweet Reasons](Most Common Reasons for Negative Sentiments by Airline.png)
-[Summarize the key insights gained from this analysis.]
+![Negative Tweet Reasons](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Most%20Common%20Reasons%20for%20Negative%20Sentiments%20by%20Airline.png)
+
+The heatmap visualizes the most common reasons for negative sentiments towards each airline.
+Key insights from this analysis:
+1) Reasons for Negative Sentiments: Various reasons like "Customer Service Issue", "Late Flight", "Can't Tell", etc., are common across different airlines. The count of tweets for each reason is indicated by the numbers in the heatmap.
+2) Airline-Specific Issues: Each airline has a unique pattern of negative reasons. Some airlines may have higher complaints in certain areas compared to others.
+3) Comparative Analysis: By comparing the heatmap across airlines, you can identify which issues are more prevalent for specific airlines. This can guide targeted improvements in customer service or operations.
 
 ### Relationship Between Sentiment Confidence and Retweet Count
 
