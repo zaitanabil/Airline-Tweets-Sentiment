@@ -27,8 +27,12 @@ Compare the distribution of sentiments (positive, neutral, negative) across diff
 [Describe the methodology used for the analysis and the type of visualizations created.]
 
 #### Results
-![Sentiment Distribution](Distribution of Sentiments Across Different Airlines.png)
-[Provide a brief summary of the findings from the visualization.]
+![Sentiment Distribution](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Distribution%20of%20Sentiments%20Across%20Different%20Airlines.png)
+
+The visualization shows the distribution of sentiments (positive, neutral, negative) across different airlines.
+1) Negative Sentiment Prevalence: Negative sentiments still dominate for most airlines, indicating a trend where customers are more likely to express dissatisfaction on social platforms.
+2) Variation Among Airlines: There's a noticeable variation in the volume and distribution of sentiments across different airlines, suggesting differing levels of customer satisfaction or public perception.
+3) Airline-Specific Trends: Specific airlines show different patterns in sentiment distribution, which could be indicative of their service quality, customer experience, or public relations effectiveness.
 
 ### Analysis of Negative Tweet Reasons by Airline
 
