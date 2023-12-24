@@ -46,7 +46,7 @@ Identify the most common reasons for negative sentiments towards each airline.
 ![Negative Tweet Reasons](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Most%20Common%20Reasons%20for%20Negative%20Sentiments%20by%20Airline.png)
 
 The heatmap visualizes the most common reasons for negative sentiments towards each airline.
-Key insights from this analysis:
+**Key insights from this analysis:**
 1) Reasons for Negative Sentiments: Various reasons like "Customer Service Issue", "Late Flight", "Can't Tell", etc., are common across different airlines. The count of tweets for each reason is indicated by the numbers in the heatmap.
 2) Airline-Specific Issues: Each airline has a unique pattern of negative reasons. Some airlines may have higher complaints in certain areas compared to others.
 3) Comparative Analysis: By comparing the heatmap across airlines, you can identify which issues are more prevalent for specific airlines. This can guide targeted improvements in customer service or operations.
@@ -60,8 +60,13 @@ Examine if tweets with higher sentiment confidence are more likely to be retweet
 [Explain the approach and visualization techniques used for this analysis.]
 
 #### Results
-![Sentiment Confidence vs Retweet Count](Relationship Between Sentiment Confidence and Retweet Count.png)
-[Discuss the findings and any correlations observed.]
+![Sentiment Confidence vs Retweet Count](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Relationship%20Between%20Sentiment%20Confidence%20and%20Retweet%20Count.png)
+
+The scatter plot above illustrates the relationship between airline sentiment confidence and retweet count, with different sentiments (positive, neutral, negative) indicated by different colors.
+**Observations:**
+1) Spread of Data: The majority of tweets, regardless of sentiment or confidence level, have low retweet counts. This is a typical pattern seen on social media platforms.
+2) Sentiment Confidence: The data points are spread across various levels of sentiment confidence, but there doesn't appear to be a clear trend where higher sentiment confidence correlates with a higher number of retweets.
+3) Sentiment Type: The plot includes different sentiment types, but there's no distinct pattern to suggest that tweets of a particular sentiment, or those with higher confidence in that sentiment, are more likely to be retweeted.
 
 ### Conclusion
 [Provide a brief overall conclusion of the data visualization part, summarizing the key insights and their implications.]
