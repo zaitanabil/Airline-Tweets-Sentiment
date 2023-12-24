@@ -24,7 +24,7 @@ Each analysis is supported by appropriate visualizations and insights derived fr
 Compare the distribution of sentiments (positive, neutral, negative) across different airlines.
 
 #### Approach
-[Describe the methodology used for the analysis and the type of visualizations created.]
+The approach involved aggregating and analyzing a dataset comprising tweets related to different airlines. These tweets were already categorized into three sentiment classes: positive, neutral, and negative. The primary focus was on quantitatively assessing the distribution of these sentiments across various airlines. To achieve this, a count plot was created using data visualization tools, offering a clear and comparative view of sentiment distribution for each airline. This visualization method was chosen for its effectiveness in displaying categorical data and enabling easy comparison across different groups. The plot distinctly marked each sentiment category with different colors, facilitating an immediate visual grasp of the predominant sentiment for each airline and across the sector.
 
 #### Results
 ![Sentiment Distribution](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Distribution%20of%20Sentiments%20Across%20Different%20Airlines.png)
@@ -40,7 +40,9 @@ The visualization shows the distribution of sentiments (positive, neutral, negat
 Identify the most common reasons for negative sentiments towards each airline.
 
 #### Approach
-[Detail the methodology and the types of visualizations used for this analysis.]
+To conduct this analysis, the dataset, which consisted of tweets related to different airlines and their associated sentiments, was filtered to focus solely on tweets with negative sentiments. The reasons for these negative sentiments were already categorized in the dataset under various labels such as "Customer Service Issue", "Late Flight", "Can't Tell", and others.
+
+A heatmap was chosen as the primary visualization tool for this analysis. This type of visualization effectively displays the frequency of each negative reason across different airlines, enabling an easy comparison. The heatmap assigns varying color intensities to different values, providing a clear visual representation of the most common complaints for each airline. The intensity of the color in the heatmap correlates with the frequency of tweets for each negative reason, allowing for quick identification of the most pressing issues for each airline.
 
 #### Results
 ![Negative Tweet Reasons](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Most%20Common%20Reasons%20for%20Negative%20Sentiments%20by%20Airline.png)
@@ -57,7 +59,9 @@ The heatmap visualizes the most common reasons for negative sentiments towards e
 Examine if tweets with higher sentiment confidence are more likely to be retweeted.
 
 #### Approach
-[Explain the approach and visualization techniques used for this analysis.]
+The methodology involved analyzing a dataset of tweets concerning various airlines, each annotated with a sentiment (positive, neutral, negative) and a corresponding confidence level for that sentiment. The key variable of interest was the number of retweets each tweet received.
+
+A scatter plot was employed as the visualization technique for this analysis. This type of plot is adept at revealing correlations or patterns between two quantitative variables. In the plot, each tweet was represented as a point, positioned according to its sentiment confidence and retweet count. Different colors were used to differentiate between the sentiment categories. This visualization approach allowed for an immediate visual appraisal of any potential relationship between sentiment confidence and the propensity of a tweet to be retweeted.
 
 #### Results
 ![Sentiment Confidence vs Retweet Count](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Relationship%20Between%20Sentiment%20Confidence%20and%20Retweet%20Count.png)
