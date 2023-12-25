@@ -3,7 +3,7 @@
 
 This project focuses on analyzing Twitter data related to major airline companies, gathered from February 2015. The main objectives and processes of the project are:
 
-+ **Data Exploration:** Analyzing the sentiment distribution across airlines, identifying common reasons for negative sentiments for each airline, and exploring the relationship between sentiment confidence and retweet count.
++ **Data Visualisation:** Analyzing the sentiment distribution across airlines, identifying common reasons for negative sentiments for each airline, and exploring the relationship between sentiment confidence and retweet count.
 + **Sentiment Analysis Model:** Building a machine learning model to predict tweet sentiments, involving data preprocessing, model refinement, and evaluation.
 + **Path to Production:** Theoretical discussion on deploying the model in a production environment, covering ongoing training, data quality assurance, performance monitoring, and integration into web services.
 
@@ -86,6 +86,66 @@ Lastly, the analysis showed no direct link between the strength of sentiment in 
 In summary, these findings underscore the importance of social media as a tool for understanding customer experiences and shaping airline strategies.
 
 ## Part 2 - Sentiment Analysis Model
+
+### Overview
+This section details the creation and refinement of a machine learning model designed to predict the sentiment of tweets related to airlines. The process includes data preprocessing, model implementation, iterative refinement, and evaluation.
+
+### 1. Model Implementation
+
+#### Objective
+Develop a machine learning model to predict the sentiment (`airline_sentiment`) of a tweet based on its contents.
+
+#### Methodology
+To address this objective, we explored various machine learning classifiers, each with their unique strengths and suited for different types of data distributions. Our approach was to compare and select the model that best fits our data and prediction goals. The following classifiers were considered, along with their respective hyperparameter grids for tuning:
+
+- **Multinomial Naive Bayes**: Ideal for text classification with discrete features. Hyperparameters: `classifier__alpha` values of [0.1, 1, 10].
+
+- **Bernoulli Naive Bayes**: Suitable for making predictions from binary feature vectors. Hyperparameters: `classifier__alpha` values of [0.1, 1, 10].
+
+- **Logistic Regression**: A robust classifier that works well for binary classification problems. Hyperparameters: `classifier__C` values of [0.1, 1, 10] and `classifier__max_iter` values of [100, 200].
+
+- **Support Vector Classifier (SVC)**: Effective in high dimensional spaces, especially useful for text classification tasks. Hyperparameters: `classifier__C` values of [0.1, 1, 10] and `classifier__kernel` options of ['linear', 'rbf', 'poly'].
+
+- **Random Forest Classifier**: A strong classifier that uses ensemble learning and is less prone to overfitting. Hyperparameters: `classifier__n_estimators` values of [100, 200] and `classifier__max_depth` values of [10, 20, None].
+
+The selection of these classifiers was driven by their widespread use and proven effectiveness in sentiment analysis tasks. Our methodology involves using a pipeline to preprocess text data and grid search to find the best hyperparameters for each model. Libraries and frameworks used in this process include scikit-learn, NLTK for text processing, and Pandas for data manipulation.
+
+### 2. Data Preprocessing
+
+#### Overview
+[Explain the preprocessing steps taken to prepare the data for the model. This may include cleaning, normalization, tokenization, etc.]
+
+#### Preprocessing Steps
+- Step 1: [Description]
+- Step 2: [Description]
+- ...
+
+### 3. Model Refinement
+
+#### Initial Model
+[Discuss the initial model's performance and any observed limitations.]
+
+#### Refinement Process
+[Detail the process of refining the model, including any additional data transformation techniques or hyperparameter tuning employed. Mention each iteration and the changes made.]
+
+#### Refinement Results
+- Iteration 1: [Summary of changes and results]
+- Iteration 2: [Summary of changes and results]
+- ...
+
+### 4. Model Evaluation
+
+#### Evaluation Metric
+[Discuss the chosen evaluation metric for the model and justify why it is appropriate for this analysis.]
+
+#### Model Performance
+[Document the final model's performance, including metrics such as accuracy, precision, recall, F1-score, etc. Include any relevant graphs or charts.]
+
+#### Improvements
+[Summarize the improvements made through each iteration and how they impacted the model's performance.]
+
+### Conclusion
+[Provide a concise conclusion, summarizing the model development process, key takeaways, and potential areas for future work.]
 
 ## Part 3 - Path to Production
 
