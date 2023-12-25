@@ -20,7 +20,6 @@ Here is a quick overview of the data structure used in our analysis:
 
 ## Part 1 - Data Visualisation
 
-### Overview
 In this part, we focus on visualizing and analyzing the sentiment distribution related to various airline companies. The following key areas are explored:
 
 - Distribution of Sentiment Across Airlines
@@ -32,7 +31,7 @@ Each analysis is supported by appropriate visualizations and insights derived fr
 ### Sentiment Distribution Overview
 ![Sentiment Distribution](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Distribution%20of%20Sentiments%20Across%20Different%20Airlines.png)
 
-This section examines the prevalence of positive, neutral, and negative sentiments in tweets about different airlines. A visual plot highlights the sentiment distribution, revealing a predominant presence of negative sentiments. Variations among airlines and specific trends are evident, indicating different customer satisfaction levels.
+This illustration show us the prevalence of positive, neutral, and negative sentiments in tweets about different airlines. A visual plot highlights the sentiment distribution, revealing a predominant presence of negative sentiments. Variations among airlines and specific trends are evident, indicating different customer satisfaction levels.
 
 ### Analyzing Negative Tweet Causes
 ![Negative Tweet Reasons](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Most%20Common%20Reasons%20for%20Negative%20Sentiments%20by%20Airline.png)
