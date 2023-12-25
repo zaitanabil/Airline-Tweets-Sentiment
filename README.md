@@ -29,17 +29,23 @@ In this part, we focus on visualizing and analyzing the sentiment distribution r
 Each analysis is supported by appropriate visualizations and insights derived from the data.
 
 ### Sentiment Distribution Overview
-![Sentiment Distribution](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Distribution%20of%20Sentiments%20Across%20Different%20Airlines.png)
+<div align="center">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Distribution%20of%20Sentiments%20Across%20Different%20Airlines.png" width="500">
+</div>
 
 This illustration show us the prevalence of positive, neutral, and negative sentiments in tweets about different airlines. A visual plot highlights the sentiment distribution, revealing a predominant presence of negative sentiments. Variations among airlines and specific trends are evident, indicating different customer satisfaction levels.
 
 ### Analyzing Negative Tweet Causes
-![Negative Tweet Reasons](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Most%20Common%20Reasons%20for%20Negative%20Sentiments%20by%20Airline.png)
+<div align="center">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Most%20Common%20Reasons%20for%20Negative%20Sentiments%20by%20Airline.png" width="500">
+</div>
 
 Focusing on negative tweets, this analysis identifies primary reasons for dissatisfaction, such as service issues or flight delays. A heatmap illustrates these factors across airlines, revealing unique patterns and frequent complaints.
 
 ### Sentiment Confidence vs. Retweet Analysis
-![Sentiment Confidence vs Retweet Count](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Relationship%20Between%20Sentiment%20Confidence%20and%20Retweet%20Count.png)
+<div align="center">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Relationship%20Between%20Sentiment%20Confidence%20and%20Retweet%20Count.png" width="500">
+</div>
 
 The relationship between sentiment confidence in tweets and their retweet frequency is explored. A scatter plot is used to analyze this correlation, showing that while sentiment confidence varies, it doesn't necessarily predict retweet likelihood.
 
