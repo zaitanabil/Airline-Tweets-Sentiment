@@ -4,12 +4,24 @@ This project focuses on analyzing Twitter data related to major airline companie
 
 + **Data Visualisation:** Analyzing the sentiment distribution across airlines, identifying common reasons for negative sentiments for each airline, and exploring the relationship between sentiment confidence and retweet count.
 + **Sentiment Analysis Model:** Building a machine learning model to predict tweet sentiments, involving data preprocessing, model refinement, and evaluation.
-+ **Path to Production:** Theoretical discussion on deploying the model in a production environment, covering ongoing training, data quality assurance, performance monitoring, and integration into web services.
++ **Path to Production**
+
+## Initial Data Overview
+
+Here is a quick overview of the data structure used in our analysis:
+| tweet_id         | airline_sentiment | airline_sentiment_confidence | negativereason | negativereason_confidence | airline        | airline_sentiment_gold | name     | negativereason_gold | retweet_count | text                                                        | tweet_coord | tweet_created                | tweet_location | user_timezone               |
+|------------------|-------------------|------------------------------|----------------|--------------------------|----------------|------------------------|----------|---------------------|---------------|------------------------------------------------------------|-------------|------------------------------|----------------|-----------------------------|
+| 570306133677760513 | neutral           | 1.0000                       | NaN            | NaN                      | Virgin America | NaN                    | cairdin  | NaN                 | 0             | @VirginAmerica What @dhepburn said.                         | NaN         | 2015-02-24 11:35:52 -0800    | NaN            | Eastern Time (US & Canada) |
+| 570301130888122368 | positive          | 0.3486                       | NaN            | 0.0000                   | Virgin America | NaN                    | jnardino | NaN                 | 0             | @VirginAmerica plus you've added commercials t...           | NaN         | 2015-02-24 11:15:59 -0800    | NaN            | Pacific Time (US & Canada) |
+| 570301083672813571 | neutral           | 0.6837                       | NaN            | NaN                      | Virgin America | NaN                    | yvonnalynn | NaN               | 0             | @VirginAmerica I didn't today... Must mean I n...           | NaN         | 2015-02-24 11:15:48 -0800    | Lets Play      | Central Time (US & Canada) |
+| 570301031407624196 | negative          | 1.0000                       | Bad Flight     | 0.7033                   | Virgin America | NaN                    | jnardino | NaN                 | 0             | @VirginAmerica it's really aggressive to blast...           | NaN         | 2015-02-24 11:15:36 -0800    | NaN            | Pacific Time (US & Canada) |
+| 570300817074462722 | negative          | 1.0000                       | Can't Tell     | 1.0000                   | Virgin America | NaN                    | jnardino | NaN                 | 0             | @VirginAmerica and it's a really big bad thing...           | NaN         | 2015-02-24 11:14:45 -0800    | NaN            | Pacific Time (US & Canada) |
+
 
 ## Part 1 - Data Visualisation
 
 ### Overview
-In this part, we focus on visualizing and analyzing the sentiment distribution within a dataset of tweets related to various airline companies. The following key areas are explored:
+In this part, we focus on visualizing and analyzing the sentiment distribution related to various airline companies. The following key areas are explored:
 
 - Distribution of Sentiment Across Airlines
 - Analysis of Negative Tweet Reasons by Airline
@@ -17,72 +29,23 @@ In this part, we focus on visualizing and analyzing the sentiment distribution w
 
 Each analysis is supported by appropriate visualizations and insights derived from the data.
 
-### Distribution of Sentiment Across Airlines
-
-#### Objective
-Compare the distribution of sentiments (positive, neutral, negative) across different airlines.
-
-#### Approach
-The approach involved aggregating and analyzing a dataset comprising tweets related to different airlines. These tweets were already categorized into three sentiment classes: positive, neutral, and negative. The primary focus was on quantitatively assessing the distribution of these sentiments across various airlines. To achieve this, a count plot was created using data visualization tools, offering a clear and comparative view of sentiment distribution for each airline. This visualization method was chosen for its effectiveness in displaying categorical data and enabling easy comparison across different groups. The plot distinctly marked each sentiment category with different colors, facilitating an immediate visual grasp of the predominant sentiment for each airline and across the sector.
-
-#### Results
+### Sentiment Distribution Overview
 ![Sentiment Distribution](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Distribution%20of%20Sentiments%20Across%20Different%20Airlines.png)
 
-The visualization shows the distribution of sentiments (positive, neutral, negative) across different airlines.
-1) Negative Sentiment Prevalence: Negative sentiments still dominate for most airlines, indicating a trend where customers are more likely to express dissatisfaction on social platforms.
-2) Variation Among Airlines: There's a noticeable variation in the volume and distribution of sentiments across different airlines, suggesting differing levels of customer satisfaction or public perception.
-3) Airline-Specific Trends: Specific airlines show different patterns in sentiment distribution, which could be indicative of their service quality, customer experience, or public relations effectiveness.
+This section examines the prevalence of positive, neutral, and negative sentiments in tweets about different airlines. A visual plot highlights the sentiment distribution, revealing a predominant presence of negative sentiments. Variations among airlines and specific trends are evident, indicating different customer satisfaction levels.
 
-### Analysis of Negative Tweet Reasons by Airline
-
-#### Objective
-Identify the most common reasons for negative sentiments towards each airline.
-
-#### Approach
-To conduct this analysis, the dataset, which consisted of tweets related to different airlines and their associated sentiments, was filtered to focus solely on tweets with negative sentiments. The reasons for these negative sentiments were already categorized in the dataset under various labels such as "Customer Service Issue", "Late Flight", "Can't Tell", and others.
-
-A heatmap was chosen as the primary visualization tool for this analysis. This type of visualization effectively displays the frequency of each negative reason across different airlines, enabling an easy comparison. The heatmap assigns varying color intensities to different values, providing a clear visual representation of the most common complaints for each airline. The intensity of the color in the heatmap correlates with the frequency of tweets for each negative reason, allowing for quick identification of the most pressing issues for each airline.
-
-#### Results
+### Analyzing Negative Tweet Causes
 ![Negative Tweet Reasons](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Most%20Common%20Reasons%20for%20Negative%20Sentiments%20by%20Airline.png)
 
-The heatmap visualizes the most common reasons for negative sentiments towards each airline.
+Focusing on negative tweets, this analysis identifies primary reasons for dissatisfaction, such as service issues or flight delays. A heatmap illustrates these factors across airlines, revealing unique patterns and frequent complaints.
 
-Key insights from this analysis:
-
-1) Reasons for Negative Sentiments: Various reasons like "Customer Service Issue", "Late Flight", "Can't Tell", etc., are common across different airlines. The count of tweets for each reason is indicated by the numbers in the heatmap.
-2) Airline-Specific Issues: Each airline has a unique pattern of negative reasons. Some airlines may have higher complaints in certain areas compared to others.
-3) Comparative Analysis: By comparing the heatmap across airlines, you can identify which issues are more prevalent for specific airlines. This can guide targeted improvements in customer service or operations.
-
-### Relationship Between Sentiment Confidence and Retweet Count
-
-#### Objective
-Examine if tweets with higher sentiment confidence are more likely to be retweeted.
-
-#### Approach
-The methodology involved analyzing a dataset of tweets concerning various airlines, each annotated with a sentiment (positive, neutral, negative) and a corresponding confidence level for that sentiment. The key variable of interest was the number of retweets each tweet received.
-
-A scatter plot was employed as the visualization technique for this analysis. This type of plot is adept at revealing correlations or patterns between two quantitative variables. In the plot, each tweet was represented as a point, positioned according to its sentiment confidence and retweet count. Different colors were used to differentiate between the sentiment categories. This visualization approach allowed for an immediate visual appraisal of any potential relationship between sentiment confidence and the propensity of a tweet to be retweeted.
-
-#### Results
+### Sentiment Confidence vs. Retweet Analysis
 ![Sentiment Confidence vs Retweet Count](https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Relationship%20Between%20Sentiment%20Confidence%20and%20Retweet%20Count.png)
 
-The scatter plot above illustrates the relationship between airline sentiment confidence and retweet count, with different sentiments (positive, neutral, negative) indicated by different colors.
-
-Observations:
-
-1) Spread of Data: The majority of tweets, regardless of sentiment or confidence level, have low retweet counts. This is a typical pattern seen on social media platforms.
-2) Sentiment Confidence: The data points are spread across various levels of sentiment confidence, but there doesn't appear to be a clear trend where higher sentiment confidence correlates with a higher number of retweets.
-3) Sentiment Type: The plot includes different sentiment types, but there's no distinct pattern to suggest that tweets of a particular sentiment, or those with higher confidence in that sentiment, are more likely to be retweeted.
+The relationship between sentiment confidence in tweets and their retweet frequency is explored. A scatter plot is used to analyze this correlation, showing that while sentiment confidence varies, it doesn't necessarily predict retweet likelihood.
 
 ### Conclusion
-The data visualization analysis of airline-related tweets yielded significant insights. Firstly, there's a clear prevalence of negative sentiments across airlines, signaling a trend where negative experiences are more commonly shared on social media. This highlights the need for airlines to focus on customer service and reputation management.
-
-Secondly, the reasons for negative sentiments vary by airline, with common issues like customer service and flight delays. This information is crucial for airlines to address specific operational challenges.
-
-Lastly, the analysis showed no direct link between the strength of sentiment in a tweet and its retweet count, suggesting other factors influence social media engagement.
-
-In summary, these findings underscore the importance of social media as a tool for understanding customer experiences and shaping airline strategies.
+The analysis underscores the predominance of negative sentiments in airline-related tweets, stressing the importance of customer service. It highlights the need for targeted improvements based on specific complaints. Additionally, the lack of a clear link between sentiment strength and social media engagement suggests the influence of other factors in online interactions. This research emphasizes the role of social media in understanding customer experiences and shaping airline strategies.
 
 ## Part 2 - Sentiment Analysis Model
 
