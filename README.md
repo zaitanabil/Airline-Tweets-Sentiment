@@ -113,39 +113,59 @@ The selection of these classifiers was driven by their widespread use and proven
 ### 2. Data Preprocessing
 
 #### Overview
-[Explain the preprocessing steps taken to prepare the data for the model. This may include cleaning, normalization, tokenization, etc.]
+Data preprocessing is a critical step in any machine learning project. It involves preparing and cleaning the raw data to make it suitable for a machine learning model. This process can include handling missing values, normalizing data, tokenizing text, and other steps to enhance the quality of the data. For our sentiment analysis model, the preprocessing steps focus primarily on text data, ensuring it is clean, standardized, and structured in a way that the model can effectively learn from it.
 
 #### Preprocessing Steps
-- Step 1: [Description]
-- Step 2: [Description]
-- ...
+- **Step 1: Column Deletion Based on Missing Values and Relevance**
+  - Deleted negativereason_gold and airline_sentiment_gold due to a high percentage of missing values (approx. 99.78% and 99.72%, respectively).
+  - Removed tweet_coord, tweet_location, and user_timezone considering many users use VPNs, making these locations unreliable.
+  - Dropped tweet_created and name as they were not directly relevant to sentiment analysis.
+- **Step 2: Merging Negative Reason with Text**
+  - For tweets with a specified negative reason, concatenated this reason with the original tweet text to provide more context to the model. This step enriches the feature set for negative sentiments.
+- **Step 3: Text Cleaning**
+  - Converted text to lowercase to maintain uniformity.
+  - Removed URLs, user mentions (@), hashtags (#), punctuations, and numbers to focus on the textual content.
+  - Applied these cleaning steps to create a basic_cleaned_text column.
+- **Step 4: Sentiment Conversion**
+  - Converted the airline_sentiment from text to a numerical format, making it suitable for the model to process. Assigned 'negative' as 0, 'neutral' as 1, and 'positive' as 2. This step is crucial for the model to perform numerical computations on the target variable.
+
+The preprocessing steps were applied meticulously to ensure that the dataset is optimized for training a sentiment analysis model. By cleaning and restructuring the text data, and converting categorical labels into numerical ones, the data is made ready for the next stages of model training.
 
 ### 3. Model Refinement
 
 #### Initial Model
-[Discuss the initial model's performance and any observed limitations.]
+The initial model, based on Multinomial Naive Bayes, demonstrated a decent performance with an accuracy of 78.76%. However, it showed limitations in effectively classifying neutral and positive sentiments, as indicated by lower recall and precision scores for these classes.
 
 #### Refinement Process
-[Detail the process of refining the model, including any additional data transformation techniques or hyperparameter tuning employed. Mention each iteration and the changes made.]
+The refinement process involved experimenting with different classifiers and hyperparameter tuning. This approach was aimed at improving the model's ability to accurately classify sentiments across all categories, particularly focusing on enhancing the performance for neutral and positive classes.
 
 #### Refinement Results
-- Iteration 1: [Summary of changes and results]
-- Iteration 2: [Summary of changes and results]
-- ...
+- **Iteration 1: Bernoulli Naive Bayes**
+  - Changes: Employed BernoulliNB with a tuned alpha value.
+  - Results: Accuracy improved to 86.89%, with significant gains in precision and recall across all classes.
+- **Iteration 2: Logistic Regression**
+  - Changes: Switched to Logistic Regression with optimized C and max_iter parameters.
+  - Results: A notable jump in accuracy to 91.73%. The model showed excellent precision, especially for negative sentiments.
+- **Iteration 3: Support Vector Classifier (SVC)**
+  - Changes: Utilized SVC with a linear kernel and adjusted C parameter.
+  - Results: Achieved the highest accuracy of 92.79%. The model displayed strong precision and recall, indicating effective classification across different sentiments.
+- **Iteration 4: RandomForest Classifier**
+  - Changes: Implemented RandomForest with tuned n_estimators and max_depth.
+  - Results: Delivered an accuracy of 92.38%, with robust precision and recall, particularly for negative sentiments.
 
 ### 4. Model Evaluation
 
 #### Evaluation Metric
-[Discuss the chosen evaluation metric for the model and justify why it is appropriate for this analysis.]
+The chosen evaluation metrics were accuracy, precision, recall, and F1-score. Accuracy provided an overall effectiveness of the model, while precision and recall offered insights into its performance across individual classes. The F1-score, being the harmonic mean of precision and recall, gave a balanced measure of the model's accuracy and completeness, essential in a multi-class classification scenario like sentiment analysis.
 
 #### Model Performance
-[Document the final model's performance, including metrics such as accuracy, precision, recall, F1-score, etc. Include any relevant graphs or charts.]
+The final model iteration using SVC demonstrated outstanding performance with an accuracy of 92.79%, showcasing its ability to accurately classify sentiments in tweets. The precision was particularly high for negative sentiments, indicating the model's effectiveness in correctly identifying negative tweets. The recall and F1-scores across all classes were also commendable, signifying a well-balanced model.
 
 #### Improvements
-[Summarize the improvements made through each iteration and how they impacted the model's performance.]
+Each model iteration brought incremental improvements. The shift from Naive Bayes to more complex models like Logistic Regression and SVC significantly enhanced the model's ability to understand and classify sentiments more accurately. Hyperparameter tuning played a crucial role in optimizing each model's performance, leading to a consistent increase in accuracy and other metrics.
 
 ### Conclusion
-[Provide a concise conclusion, summarizing the model development process, key takeaways, and potential areas for future work.]
+The development of the sentiment analysis model was a methodical process that involved experimenting with various algorithms and fine-tuning hyperparameters. Starting from a baseline Naive Bayes model, the project evolved through several iterations, each enhancing the model's ability to classify sentiments with higher accuracy. The final model, an SVC, emerged as the most effective, striking a balance between high accuracy and robust performance across all sentiment classes.
 
 ## Part 3 - Path to Production
 
