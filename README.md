@@ -77,11 +77,26 @@ Data preparation is crucial for machine learning. My focus was on refining text 
 
 #### Preprocessing Steps
 - **Step 1: Column Deletion Based on Missing Values and Relevance**
+
+<div align="center">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Data%20Quality%20Assessment%20Table.png" width="500">
+</div>
+
   - Deleted negativereason_gold and airline_sentiment_gold due to a high percentage of missing values (approx. 99.78% and 99.72%, respectively).
   - Removed tweet_coord, tweet_location, and user_timezone considering many users use VPNs, making these locations unreliable.
   - Dropped tweet_created and name as they were not directly relevant to sentiment analysis.
+
+<div align="center">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Cleaned%20data.png" width="500">
+</div>
+
 - **Step 2: Merging Negative Reason with Text**
   - For tweets with a specified negative reason, concatenated this reason with the original tweet text to provide more context to the model. This step enriches the feature set for negative sentiments.
+
+<div align="center">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Merging%20Screenshot.png" width="500">
+</div>
+ 
 - **Step 3: Text Cleaning**
   - Converted text to lowercase to maintain uniformity.
   - Removed URLs, user mentions (@), hashtags (#), punctuations, and numbers to focus on the textual content.
