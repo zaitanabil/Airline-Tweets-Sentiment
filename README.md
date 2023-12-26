@@ -140,9 +140,9 @@ The initial model, based on Multinomial Naive Bayes, demonstrated a decent perfo
 ### 4. Model Evaluation
 
 #### Evaluation Metric
-The chosen evaluation metrics were accuracy, precision, recall, and F1-score. Accuracy provided an overall effectiveness of the model, while precision and recall offered insights into its performance across individual classes. The F1-score, being the harmonic mean of precision and recall, gave a balanced measure of the model's accuracy and completeness, essential in a multi-class classification scenario like sentiment analysis.
+For assessing the model's performance, I selected metrics such as accuracy, precision, recall, and F1-score. Accuracy serves as a measure of the model's overall effectiveness. Precision and recall shed light on its ability to perform accurately across different classes. The F1-score, which is the harmonic mean of precision and recall, provides a comprehensive view of both the model's precision and its thoroughness, which is particularly important in multi-class scenarios like sentiment analysis.
 
-I've also added "Training and Evaluation Time" to take it into account when choosing the best classifier if necessary.
+Additionally, I've incorporated 'Training and Evaluation Time' as a metric. This will aid in determining the most efficient classifier when time is a critical factor in the decision-making process.
 
 #### Model Performance
 The SVC model showcased exceptional precision and accuracy, notably in pinpointing negative sentiments. It also maintained balanced recall and F1-scores, indicating its overall efficiency. Despite this, the SVC takes about twice as long to process as the RandomForest model, even with comparable accuracy levels. In scenarios where time isn't a critical factor, the SVC would be the ideal choice. However, with an anticipated surge in data volume, which could extend processing times further, the faster RandomForest model might be a more suitable option due to its similar accuracy but quicker execution.
@@ -162,7 +162,6 @@ Developing this sentiment analysis model was an iterative process, starting from
 ### Ongoing Model Training
 
 To ensure our sentiment analysis model remains current and accurate, I propose a distinctive strategy for integrating fresh data:
-
 - **Creation of a Data Integration API:** I'll design a specialized API that includes a unique feature, termed 'Data Integration'. This functionality will be activated via a user-friendly interface, specifically a button labeled 'Add new data'.
 - **Automated Data Assimilation Process:** Upon activation, this feature will trigger a backend mechanism tailored to seamlessly blend the incoming data with our pre-existing dataset. The focus will be on critical data aspects like sentiment values, tweet text (and potentially the negative sentiment reasons when applicable).
 - **Intelligent Model Update Protocol:** Concurrent with the data update, the system will autonomously initiate the retraining process for our chosen analytical model, in this instance, the Support Vector Classifier (SVC). This process is designed to ensure the model evolves and adapts in line with the new data characteristics.
