@@ -87,7 +87,7 @@ Data preparation is crucial for machine learning. My focus was on refining text 
   - Dropped tweet_created and name as they were not directly relevant to sentiment analysis.
 
 <div align="center">
-    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Cleaned%20data.png" width="500">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/Cleaned%20data.png" width="700">
 </div>
 
 - **Step 2: Merging Negative Reason with Text**
