@@ -149,7 +149,7 @@ The SVC model showcased exceptional precision and accuracy, notably in pinpointi
 
 #### Improvements
 <div align="center">
-    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/hyperparameter.png" height="250">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/hyperparameter.png" width="700">
 </div>
 
 Each model iteration brought noticeable improvements. The evolution from simpler Naive Bayes to more intricate models, coupled with hyperparameter tuning, resulted in consistently better performance.
