@@ -142,8 +142,10 @@ The initial model, based on Multinomial Naive Bayes, demonstrated a decent perfo
 #### Evaluation Metric
 The chosen evaluation metrics were accuracy, precision, recall, and F1-score. Accuracy provided an overall effectiveness of the model, while precision and recall offered insights into its performance across individual classes. The F1-score, being the harmonic mean of precision and recall, gave a balanced measure of the model's accuracy and completeness, essential in a multi-class classification scenario like sentiment analysis.
 
+I've also added "Training and Evaluation Time" to take it into account when choosing the best classifier if necessary.
+
 #### Model Performance
-The SVC model excelled with high accuracy and precision, especially in negative sentiment detection. Balanced recall and F1-scores indicated a well-rounded model.
+The SVC model showcased exceptional precision and accuracy, notably in pinpointing negative sentiments. It also maintained balanced recall and F1-scores, indicating its overall efficiency. Despite this, the SVC takes about twice as long to process as the RandomForest model, even with comparable accuracy levels. In scenarios where time isn't a critical factor, the SVC would be the ideal choice. However, with an anticipated surge in data volume, which could extend processing times further, the faster RandomForest model might be a more suitable option due to its similar accuracy but quicker execution.
 
 #### Improvements
 Each model iteration brought noticeable improvements. The evolution from simpler Naive Bayes to more intricate models, coupled with hyperparameter tuning, resulted in consistently better performance.
