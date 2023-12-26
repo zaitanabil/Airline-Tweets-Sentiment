@@ -132,7 +132,7 @@ The initial model, based on Multinomial Naive Bayes, demonstrated a decent perfo
 
 - **RandomForest Classifier**
   - Changes: Implemented RandomForest with tuned n_estimators and max_depth.
-  - Results: Delivered an accuracy of 92.38%, with robust precision and recall, particularly for negative sentiments.
+  - Results: Delivered an accuracy of 92.25%, with robust precision and recall, particularly for negative sentiments.
 <div align="center">
     <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/RandomForestClassifier.png" height="250">
 </div>
