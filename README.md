@@ -141,7 +141,7 @@ To ensure our sentiment analysis model remains current and accurate, I propose a
 - **Alert Systems:** Implement alert systems for performance deviations, enabling quick response to potential issues.
 
 ### Model Integration into Web Applications
-- **API Development:** Develop a RESTful API, facilitating seamless integration of the model into web applications.
+- **API Development:** Develop an API, facilitating seamless integration of the model into web applications.
 - **Load Management:** Ensure the model's scalability and robustness under varying loads, utilizing cloud services and load balancing techniques.
 - **Security Measures:** Implement security protocols, particularly for data encryption and access control, to protect sensitive information processed by the model.
 
