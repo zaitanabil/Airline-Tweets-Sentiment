@@ -111,16 +111,31 @@ These steps ensured a well-structured and clean dataset, ready for model trainin
 #### Initial Model
 The initial model, based on Multinomial Naive Bayes, demonstrated a decent performance with an accuracy of 78.76%. However, it showed limitations in effectively classifying neutral and positive sentiments, as indicated by lower recall and precision scores for these classes.
 
+<div align="center">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/MultinomialNB.png" width="500">
+</div>
+
 #### Enhancement Stages
 - **Logistic Regression**
   - Changes: Employed Logistic Regression with optimized C and max_iter parameters.
   - Results: A notable jump in accuracy to 91.73%. The model showed excellent precision, especially for negative sentiments.
+<div align="center">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/LogisticRegression.png" width="500">
+</div>
+
 - **Support Vector Classifier (SVC)**
   - Changes: Utilized SVC with a linear kernel and adjusted C parameter.
   - Results: Achieved the highest accuracy of 92.79%. The model displayed strong precision and recall, indicating effective classification across different sentiments.
+<div align="center">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/SVC.png" width="500">
+</div>
+
 - **RandomForest Classifier**
   - Changes: Implemented RandomForest with tuned n_estimators and max_depth.
   - Results: Delivered an accuracy of 92.38%, with robust precision and recall, particularly for negative sentiments.
+<div align="center">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/RandomForestClassifier.png" width="500">
+</div>
 
 ### 4. Model Evaluation
 
