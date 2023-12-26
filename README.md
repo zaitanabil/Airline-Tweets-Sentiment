@@ -148,6 +148,10 @@ I've also added "Training and Evaluation Time" to take it into account when choo
 The SVC model showcased exceptional precision and accuracy, notably in pinpointing negative sentiments. It also maintained balanced recall and F1-scores, indicating its overall efficiency. Despite this, the SVC takes about twice as long to process as the RandomForest model, even with comparable accuracy levels. In scenarios where time isn't a critical factor, the SVC would be the ideal choice. However, with an anticipated surge in data volume, which could extend processing times further, the faster RandomForest model might be a more suitable option due to its similar accuracy but quicker execution.
 
 #### Improvements
+<div align="center">
+    <img src="https://github.com/zaitanabil/Airline-Tweets-Sentiment/blob/main/hyperparameter.png" height="250">
+</div>
+
 Each model iteration brought noticeable improvements. The evolution from simpler Naive Bayes to more intricate models, coupled with hyperparameter tuning, resulted in consistently better performance.
 
 ### Conclusion
